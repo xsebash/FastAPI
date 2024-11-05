@@ -1,5 +1,6 @@
 # %%
 from typing import Union
+from fastapi import FastAPI
 import fastapi
 import tensorflow as tf
 import numpy as np
