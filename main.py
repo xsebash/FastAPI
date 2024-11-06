@@ -19,9 +19,9 @@ app = FastAPI()
 # %%
 
 # Cargar el modelo
-model = load_model('/Users/sebas/Documents/MODELO.h5')
-
-
+#model = load_model('/Users/sebas/Documents/MODELO.h5')
+model = load_model('/Users/sebas/Downloads/MODELO.h5')
+#
 # Definir las clases
 class_names = ['Normal', 'Anomalía']  # Cambia según tu contexto
 
