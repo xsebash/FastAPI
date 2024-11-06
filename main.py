@@ -20,8 +20,17 @@ app = FastAPI()
 
 # Cargar el modelo
 #model = load_model('/Users/sebas/Documents/MODELO.h5')
-model = load_model('/Users/sebas/Downloads/MODELO.h5')
-#
+#model = load_model('/Users/sebas/Downloads/MODELO.h5')
+import h5py
+
+# Define la ruta correcta al archivo
+file_path = '/Users/sebas/Downloads/MODELO.h5'
+
+# Abre el archivo
+with h5py.File(file_path, 'r') as f:
+    # Realiza operaciones con el archivo
+    print(list(f.keys()))  # Por ejemplo, imprimir las claves del archivo
+
 # Definir las clases
 class_names = ['Normal', 'Anomalía']  # Cambia según tu contexto
 
