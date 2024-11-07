@@ -24,7 +24,7 @@ app = FastAPI()
 import h5py
 
 # Define la ruta correcta al archivo
-file_path = '/Users/sebas/Downloads/MODELO.h5'
+file_path = './MODELO.h5'
 
 # Abre el archivo
 with h5py.File(file_path, 'r') as f:
