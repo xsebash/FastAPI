@@ -15,9 +15,6 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-
-# %%
-
 # Cargar el modelo
 #model = load_model('/Users/sebas/Documents/MODELO.h5')
 #model = load_model('/Users/sebas/Downloads/MODELO.h5')
@@ -25,7 +22,7 @@ import h5py
 
 # Define la ruta correcta al archivo
 file_path = './MODELO.h5'
-model = load_model(file_path)
+
 # Abre el archivo
 with h5py.File(file_path, 'r') as f:
     # Realiza operaciones con el archivo
