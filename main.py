@@ -20,8 +20,8 @@ app = FastAPI()
 #model = load_model('/Users/sebas/Downloads/MODELO.h5')
 import h5py
 
-# Define la ruta correcta al archivo
-file_path = './MODELO.h5'
+# Define la ruta correcta al archivp
+file_path = './MODELOSCANMA.h5'
 model = load_model(file_path, compile=False)
 
 # Abre el archivo
