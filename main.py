@@ -80,4 +80,8 @@ async def analyze_image(image: ImageURL):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error procesando la imagen: {str(e)}")
 
+@app.get("/tf_version/")
+def tf_version():
+    return tf.__version__
+
 #python3 -m uvicorn FastAPI:app --reload --port 8007
