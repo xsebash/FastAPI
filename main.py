@@ -59,7 +59,7 @@ async def analyze_image(image: ImageURL):
             #raise HTTPException(status_code=400, detail="No se pudo descargar la imagen")
 
         #Abrir la imagen y preprocesarla
-       img = Image.open(BytesIO(response.content))
+        img = Image.open(BytesIO(response.content))
         processed_image = preprocess_image(img)
 
         #Realizar la predicción
