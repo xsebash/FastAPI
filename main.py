@@ -24,7 +24,7 @@ model = load_model(file_path, compile=False)
 
 #Abre el archivo
 with h5py.File(file_path, 'r') as f:
-     Realiza operaciones con el archivo
+     #Realiza operaciones con el archivo
     print(list(f.keys()))  # Por ejemplo, imprimir las claves del archivo
 
 #Definir las clases
