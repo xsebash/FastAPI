@@ -17,7 +17,7 @@ app = FastAPI()
 
 import h5py
 
- Define la ruta correcta al archivp
+#Define la ruta correcta al archivp
 file_path = './MODELO.h5'
 #H
 model = load_model(file_path, compile=False)
