@@ -66,11 +66,11 @@ async def analyze_image(image: ImageURL):
         prediction = model.predict(processed_image)
         predicted_class_index = np.argmax(prediction, axis=-1)[0]
         predicted_class = class_names[predicted_class_index]
-
-       return {
-            "filename": "remote_image",
-            "message": "Image processed and analyzed.",
-           "prediction": predicted_class
+         
+         return {
+        "filename": "remote_image",
+        "message": "Image processed and analyzed.",
+        "prediction": predicted_class
     }
     except requests.exceptions.Timeout:
         raise HTTPException(status_code=504, detail="Timeout: La URL tardó demasiado en responder")
