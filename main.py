@@ -71,7 +71,7 @@ async def analyze_image(image: ImageURL):
             "filename": "remote_image",
             "message": "Image processed and analyzed.",
            "prediction": predicted_class
-        }
+    }
     except requests.exceptions.Timeout:
         raise HTTPException(status_code=504, detail="Timeout: La URL tardó demasiado en responder")
     except Exception as e:
