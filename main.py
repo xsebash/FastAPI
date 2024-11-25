@@ -67,7 +67,7 @@ async def analyze_image(image: ImageURL):
         predicted_class_index = np.argmax(prediction, axis=-1)[0]
         predicted_class = class_names[predicted_class_index]
          
-         return {
+        return {
         "filename": "remote_image",
         "message": "Image processed and analyzed.",
         "prediction": predicted_class
