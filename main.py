@@ -56,7 +56,7 @@ async def analyze_image(image: ImageURL):
          #Agrega un tiempo de espera
         response = requests.get(image.url, timeout=10)  # Tiempo de espera de 10 segundos
         if response.status_code != 200:
-            #raise HTTPException(status_code=400, detail="No se pudo descargar la imagen")
+            raise HTTPException(status_code=400, detail="No se pudo descargar la imagen")
 
         #Abrir la imagen y preprocesarla
         img = Image.open(BytesIO(response.content))
@@ -75,7 +75,7 @@ async def analyze_image(image: ImageURL):
     except requests.exceptions.Timeout:
         raise HTTPException(status_code=504, detail="Timeout: La URL tardó demasiado en responder")
     except Exception as e:
-     #  raise HTTPException(status_code=500, detail=f"Error procesando la imagen: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error procesando la imagen: {str(e)}")
 
 @app.get("/tf_version/")
 def tf_version():
